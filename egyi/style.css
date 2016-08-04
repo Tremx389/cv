@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("ProximaNova-Reg.ttf")  format('truetype');
+}
+@font-face {
+  font-family: "ProximaNovaLight";
+  src: url("ProximaNova-Light.ttf")  format('truetype');
+}
+@font-face {
+  font-family: "ProximaNovaThin";
+  src: url("ProximaNova-Thin.ttf")  format('truetype');
+}
+
+// * {
+//	box-shadow: 0 0 10px red !important;
+//}
+
+body {
+	margin:0;
+	padding:0;
+	background-size:  100%;
+	background-repeat: no-repeat;
+	height: 800px;
+	font-family: "ProximaNovaRegular";
+
+//	overflow: hidden;
+
+	background-color: #f2f2f2;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "ProximaNovaThin";
+	text-transform: uppercase;
+}
+
+header {
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+	//height: 50px;
+	width: 100%;
+	background-color: #292929;
+	border-bottom: 5px solid #202020;
+}
+
+header div {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+header div span.search_box {
+	position: absolute;
+	margin-top: 15px;
+	margin-left: 12px;
+}
+
+header div span.search_box input {
+	padding-bottom: 4px;
+	padding-top: 6px;
+	padding-left: 10px;
+	padding-right: 2px;
+	border: 0px;
+
+	width: 130px;
+	font-size: 16px;
+	border-right: 5px solid rgba(0,0,0,0.15);
+
+	transition: all 0.1s ease-in-out;
+	opacity: 0.9;
+}
+
+header div span.search_box input:hover, header div span.search_box input:focus {
+	opacity: 1;
+}
+
+header div span.search_box input:focus {
+	width: 300px;
+	border-right: 5px solid #389389;
+}
+
+header div span.search_box ul {
+	display: none;
+	position: absolute;
+	left: 0px;
+	list-style-type: none;
+	width: 100%; 
+	padding: 0px;
+	margin: 0px;
+}
+
+header div span.search_box ul li {
+	border-right: 5px solid #389389;
+	padding-left: 5px;
+
+	background: #fff;
+	position: relative;
+	height:46px;
+
+	cursor:pointer;
+}
+
+header div span.search_box ul li:hover {
+	background-color: #f2f2f2;
+	border-right-color: #5ab;
+}
+
+header div span.search_box ul li.see_more {
+	background: #f2f2f2;
+
+	padding-top: 5px;
+	text-align: center;
+	font-size: 14px;
+	height: 22px;
+
+	border-bottom-right-radius: 15px 50px;
+}
+
+header div span.search_box ul li:hover,
+header div span.search_box ul li:hover > div {
+	text-decoration: underline;
+}
+
+header div span.search_box ul li img {
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	margin-top: 3px;
+	background-color: black;
+	display: inline;
+}  
+
+header div span.search_box ul li div {
+	display: inline;
+	position: absolute;
+	top: 15px;
+
+	padding-left: 10px;
+}
+
+header div a img {
+	height: 47px;
+	position: relative;
+	top: 5px;
+	margin-left: 25px;
+}
+
+header div nav ul {
+	margin-top: 18px;
+	margin-bottom: 14px;
+}
+
+header div nav ul li {
+	list-style-type: none;
+	display: inline;
+	position: relative;
+}
+
+header div nav ul li a {
+	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	color: #999;
+}
+
+
+header div nav ul li a:hover > span, 
+header div nav ul li a.sign_in > span {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	padding-bottom: 16px;
+}
+
+header div nav ul li a.sign_in:hover > span {
+	border-color: #00ff00 !important;
+}
+
+.coming_soon {
+	color: #555;
+	cursor: default;
+}
+
+.coming_soon:before {
+	color: red;
+	content: "HAMAROSAN";
+	position: absolute;
+	top: 0px;
+	font-size: 14px;
+	left: 0px;
+	transform: rotate(-20deg);
+	opacity: 0.7;
+}
+
+header nav ul li a:hover {
+	list-style-type: none;
+	display: inline;
+
+	color: #ccc;
+}
+
+div.content div.inner_content {
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.content {
+	background:url(../cover.jpg) center center;
+	background-size: 100% auto;
+	height: 600px;
+	margin-top: 57px;
+	border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+
+div.content div.inner_content span {
+	position: absolute;
+	right: -90px;
+	top: 220px;
+	color: white;
+	text-shadow: 0 0 3px black;
+}
+
+div.content div.inner_content span .desc, header nav ul li a, font {
+	font-family: "ProximaNovaLight";
+}
+
+div.content div.inner_content ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+
+	overflow: auto;
+	display: inline-block;
+	position: absolute;
+//	margin-left: 5px;
+}
+
+div.content div.inner_content ul li {
+
+//	box-shadow: 0 5px 7px rgba(0,0,0,0.3);
+	display: inline-block;
+	float: left;
+	margin-right: 4px;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+
+	border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+
+div.content div.inner_content ul li a {
+	color: white;
+	display: block;
+	width: 125px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	font-size: 14px;
+
+	text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.scrolled {
+	position: fixed !important;
+	top: -70px;
+}
+
+.scrolled li:hover > a {
+	padding-top: 140px !important;
+}
+
+div.content div.inner_content ul li:hover > a {
+	padding-top: 10px;
+}
+
+
+div.content div.inner_content ul li a img {
+	height: 70px;
+	display: block;
+	margin: 10px auto;
+}
+
+div.content div.inner_content canvas#spiders {
+	opacity: 0.9;
+	background-color: rgba(0,100,0,0.0);
+	height: 600px;
+	width: 600px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+a.sign_up {
+	background-color: rgba(255,255,255,0.5);
+	background-image: url(../person_2.png);
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	width: 80px;
+	height: 80px;
+	border: 10px solid rgb(242,242,242);
+	border-radius: 100px;
+	position: absolute;
+	left: 50%;
+	top: 249px;
+	margin-left: -51px;
+//	box-shadow: 0 0 1px black;
+//	box-shadow: inset 0 0 15px rgba(255,255,255,0.5);
+text-align: center;
+
+//	transition: all 0.3s ease-in-out;
+}
+
+a.sign_up:hover {
+//	background-size: 115%;
+}
+
+a.sign_up div.connect {
+	position: absolute;
+	top: 45px;
+	color: white;
+	padding-top: 55px;
+//	text-shadow: 0 0 1px black;
+
+	height: 20px;
+	border-bottom: 2px solid white;
+}
